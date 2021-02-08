@@ -1,0 +1,891 @@
+/* Подключение шрифтов -----------------------------------+ */
+  
+  /* Подключаем шрифт OpenSans-Regular */
+  @font-face {
+    font-family: open sans;
+    src: url(https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff);
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+    /* Подключаем шрифт OpenSans-Bold */
+  @font-face {
+    font-family: open sans;
+    src: url(https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff);
+    font-weight: 700;
+    font-style: normal;
+  } 
+  /* Конец Подключение шрифтов -----------------------------+ */
+  
+  /* Корневой элемент страницы -----------------------------+ */
+  body {
+    box-sizing: border-box;
+    margin: 0;
+      
+    font-family: open sans, arial, sans-serif;
+  }
+  
+  /* Заголовок NOEMI с фоном -------------------------------+ */
+  .header {
+    position: relative;
+    box-sizing: border-box;
+    
+    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: #000000;
+  }
+  
+    /* Блок container-header-menu --------------------------+ */
+  .container-header-menu {
+    position: relative;
+    z-index: 2;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+    box-sizing: border-box;
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 28px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .header-logo {
+    width: 179px;
+  }
+  
+  .menu {
+    box-sizing: border-box;
+    padding-top: 13px;
+  }
+  
+  .menu-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+    box-sizing: border-box;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+  }
+  
+  .menu-list-item {
+    margin-right: 38px;
+  }
+  
+  .menu-list-item:last-child {
+    margin-right: 0;
+  }
+  
+    /* Задаем параметры шрифта */
+  .menu-link {
+    font-size: 13px;
+    font-weight: 400;
+    
+    text-decoration: none;
+    text-transform: uppercase;
+     
+    color: #ffffff;
+  }
+  
+    /* Задаем цвет элементам меню при наведении */
+  .menu-link:hover {
+    color: #e058ff;
+  }
+  
+    /* Задаем цвет элементам меню в состоянии фокуса */
+  .menu-link:focus {
+    color: #ff5a66;
+  }
+  
+    /* Конец Блок container-header-menu --------------------+ */
+  
+    /* Блок container-title --------------------------------+ */
+  .container-title {
+    position: relative;
+    z-index: 2;
+    
+    box-sizing: border-box;
+    width: 750px;
+    margin: 0 auto;
+    padding: 125px 0;
+    text-align: center;
+  }
+  
+    /* Задаем параметры шрифта */
+  .title {
+    box-sizing: border-box;
+    margin: 0;
+    
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 75px;
+  
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+  
+    /* Конец Блок container-title --------------------------+ */
+  
+  /* Создаем псевдоэлемент, затемняющий изображение */
+  .header::after {
+    content: "";
+    background-color: #000000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.45;
+  }
+  /* Конец Заголовок NOEMI с фоном -------------------------+ */
+  
+  /* Основной контент страницы -----------------------------+ */
+  /* Главный раздел с новостями ----------------------------+ */
+  .main-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    
+    box-sizing: border-box;
+    width: 1200px;
+    
+    margin-top: 64px;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .news { 
+    box-sizing: border-box;
+    width: 778px;
+  }
+  
+  /* Задаем параметры расположения блоков статей */
+  .news-content {
+    display: flex;
+  }
+  
+  /* Добавляем отступы, начиная со второй статьи */
+  .news-content:nth-child(n+2) {
+    box-sizing: border-box;
+    margin-top: 59px;
+  }
+  
+  .news-preview {
+    padding-top: 5px;
+  }
+  
+  .img-content {
+    width: 381px;
+  }
+  
+  /* Задаем параметры расположения блоков и шрифтов статей */
+  .news-info {  
+    box-sizing: border-box;
+    margin-left: 30px;
+  }
+  
+  .menu-news-content-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+  }
+  
+  .menu-news-list-item {
+    font-size: 14px;
+    font-weight: 700;
+    
+    text-transform: uppercase;
+    color: #b59f5b;
+  }
+  
+  /* Задаем отспуты пунктам меню */
+  .menu-news-list-item {
+    margin-right: 19px;
+  }
+  
+  /* Убираем отступ у последнего пункта */
+  .menu-news-list-item:last-child {
+    margin-right: 0px;
+  }
+  
+  .menu-news-link {
+    text-decoration: none;
+    color: #b59f5b;
+  }
+  
+  /* Задаем цвет элементам меню при наведении */
+  .menu-news-link:hover {
+    color: #e058ff;
+  }
+  
+    /* Задаем цвет элементам меню в состоянии фокуса */
+  .menu-news-link:focus {
+    color: #ff5a66;
+  }
+  
+  .title-news {
+    box-sizing: border-box;
+    margin: 0;
+    
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    
+    text-transform: uppercase;
+    color: #0f0d0e;
+  }
+  
+  .title-news-link { 
+    text-decoration: none;
+    color: #0f0d0e;
+  }
+  
+  /* Задаем цвет заголовка статьи при наведении */
+  .title-news-link:hover {
+    color: #8f79ff;
+  }
+  
+    /* Задаем цвет заголовка статьи в состоянии фокуса */
+  .title-news-link:focus {
+    color: #ff5a66;
+    text-decoration: underline;
+  }
+  
+  .container-news-date-footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    box-sizing: border-box;
+    margin-top: 25px;
+  }
+  
+  .news-date {
+    box-sizing: border-box;
+    max-width: 115px;
+    
+    font-size: 12px;
+    font-weight: 400;
+    
+    text-transform: capitalize;
+    color: #888888;
+  }
+  
+  .news-footer {
+    box-sizing: border-box;
+    width: 237px;
+    
+    font-size: 12px;
+    font-weight: 700;
+  
+    margin-left: 15px;
+    color: #000000;
+  }
+  
+  .container-news-description {
+    box-sizing: border-box;
+    margin-top: 45px;
+  }
+  
+  .news-description {  
+    margin: 0;
+    
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+  
+    color: #0f0d0e;
+  }
+  /* Конец Главный раздел с новостями ----------------------+ */
+  
+  /* Боковой раздел ----------------------------------------+ */
+  .aside {
+    box-sizing: border-box;
+    width: 272px;
+    
+    margin-left: 120px;
+  }
+  
+  /* Раздел RECENT POSTS ----------------------------------+ */
+  .container-title-recent-posts {
+    position: relative;
+  }
+  
+  .title-recent-posts {
+    display: block;
+    
+    font-size: 14px;
+    font-weight: 700;
+    
+    text-align: center;
+    text-transform: uppercase;
+    color: #0f0d0e;
+    
+    box-sizing: border-box;
+    margin: 0;
+    
+    /* Зададим отступ псевдоэлементу с декорацией */
+    padding-bottom: 14px;
+  }
+  
+  .title-recent-posts::after {
+    content: "";
+    
+    position: absolute;
+    display: block;
+    
+    width: 65px;
+    height: 3px;
+    
+    background-color: #e1d9bd;
+    
+    /* Зададим положение псевдоэлементу с декорацией */
+    bottom: 0;
+    left: 104px;
+  }
+  
+  .news-sidebar { 
+    margin-top: 29px;
+  }
+  
+  .news-content-sidebar {
+    display: flex;
+  }
+  
+  /* Добавляем отступы, начиная со второй статьи */
+  .news-content-sidebar:nth-child(n+2) {
+    box-sizing: border-box;
+    margin-top: 22px;
+  }
+  
+  .news-preview-sidebar {
+    margin-top: 3px;
+  }
+  
+  .img-content-sidebar {
+    width: 70px;
+  }
+  
+  .news-info-sidebar { 
+    margin-left: 17px;
+  }
+  
+  .news-date-sidebar {
+    box-sizing: border-box;
+    max-width: 115px;
+    
+    font-size: 12px;
+    font-weight: 400;
+    
+    text-transform: capitalize;
+    color: #9a9a9a;
+  }
+  
+  .title-news-sidebar {
+    box-sizing: border-box;
+    margin: 0;
+    
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    
+    text-transform: uppercase;
+    color: #0f0d0e;
+  }
+  
+  .title-news-link-sidebar {
+    text-decoration: none;
+    color: #0f0d0e;
+  }
+  
+  /* Задаем цвет заголовка статьи при наведении */
+  .title-news-link-sidebar:hover {
+    color: #8f79ff;
+  }
+  
+    /* Задаем цвет заголовка статьи в состоянии фокуса */
+  .title-news-link-sidebar:focus {
+    color: #ff5a66;
+    text-decoration: underline;
+  }
+  
+  /* Конец Раздел RECENT POSTS -----------------------------+ */
+  
+  /* Раздел Форма поиска -----------------------------------+ */
+  .sidebar-search {
+    margin-top: 60px;
+  }
+  
+  .search {
+    display: flex;
+    
+    margin-left: 1px;
+    margin-right: 1px;
+  }
+  
+  .field-search {
+    box-sizing: border-box;
+    width: 220px;
+    height: 48px;
+    
+    padding-left: 18px;
+    padding-right: 18px;
+    
+    font-family: inherit;
+    font-size: 13px;
+    color: #000000;
+    font-weight: 400;
+    
+    background-color: #f4f7f6;
+    border: none;
+  }
+  
+  .field-search:hover {
+    border: 1px solid #aee5ff;
+    padding-left: 17px;
+  }
+  
+  .field-search:focus {
+    border: 1px solid #8f79ff;
+    padding-left: 17px;
+  }
+  
+  .button-search {
+    font-family: inherit;
+    
+    box-sizing: border-box;
+    width: 48px;
+    height: 48px;
+    
+    background-color: #b59f5b;
+    border: none;
+    
+    /* Добавляем фоновую иконку */
+    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/search.svg");
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position: center center;
+  }
+  
+  .button-search:hover {
+    border: 1px solid #8f79ff;
+  }
+  
+  .button-search:focus {
+    border: 1px solid #ff5a66;
+  }
+  /* Конец Раздел Форма поиска -----------------------------+ */
+  
+  /* Раздел Форма с подпиской на email ---------------------+ */
+  .sidebar-email {
+    box-sizing: border-box;
+    margin-top: 60px;
+  }
+  
+  .container-email-title {
+    position: relative;
+  }
+  
+  .title-email {
+    display: block;
+    
+    font-size: 14px;
+    font-weight: 700;
+    
+    text-align: center;
+    text-transform: uppercase;
+    color: #0f0d0e;
+    
+    box-sizing: border-box;
+    margin: 0;
+    
+    /* Зададим отступ псевдоэлементу с декорацией */
+    padding-bottom: 14px;
+  }
+  
+  .title-email::after {
+    content: "";
+    
+    position: absolute;
+    display: block;
+    
+    width: 65px;
+    height: 3px;
+    
+    background-color: #e1d9bd;
+    
+    /* Зададим положение псевдоэлементу с декорацией */
+    bottom: 0;
+    left: 104px;
+  }
+  
+  .form-email { 
+    margin-top: 23px;
+  }
+  
+  .field-email {
+    display: block;
+    
+    box-sizing: border-box;
+    width: 272px;
+    height: 48px;
+    
+    padding-left: 18px;
+    padding-right: 18px;
+    
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 400;
+    color: #000000;
+    
+    background-color: #f4f7f6;
+    border: none;
+  }
+  
+  .field-email:hover {
+    border: 1px solid #aee5ff;
+    padding-left: 17px;
+  }
+  
+  .field-email:focus {
+    border: 1px solid #8f79ff;
+    padding-left: 17px;
+  }
+  
+  .button-subscribe {
+    box-sizing: border-box;
+    margin-top: 17px;
+    width: 272px;
+    height: 48px;
+    
+    font-family: inherit;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+    background-color: #b59f5b;
+    border: none;
+  }
+  
+  .button-subscribe:hover {
+    border: 1px solid #8f79ff;
+  }
+  
+  .button-subscribe:focus {
+    border: 1px solid #ff5a66;
+  }
+  /* Конец Раздел Форма с подпиской на email ---------------+ */
+  
+  /* Блок с тегами -----------------------------------------+ */
+  .sidebar-tags {
+    box-sizing: border-box;
+    margin-top: 60px;
+  }
+  
+  .container-title-tags {
+    position: relative;
+  }
+  
+  .title-tags {
+    display: block;
+    
+    font-size: 14px;
+    font-weight: 700;
+    
+    text-align: center;
+    text-transform: uppercase;
+    color: #0f0d0e;
+    
+    box-sizing: border-box;
+    margin: 0;
+    
+    /* Зададим отступ псевдоэлементу с декорацией */
+    padding-bottom: 14px;
+  }
+  
+  .title-tags::after {
+    content: "";
+    
+    position: absolute;
+    display: block;
+    
+    width: 65px;
+    height: 3px;
+    
+    background-color: #e1d9bd;
+    
+    /* Зададим положение псевдоэлементу с декорацией */
+    bottom: 0;
+    left: 104px;
+  }
+  
+  .container-tag {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    box-sizing: border-box;
+    margin-top: 23px;
+    padding-left: 0;
+  }
+  
+  .tag {
+    box-sizing: border-box;
+    margin-bottom: 6px;
+    margin-right: 5px;
+    padding: 4px 13px 4px 13px;
+    
+    border: 3px solid #ededed;
+    list-style: none;
+    
+    font-size: 12px;
+    font-weight: 700;
+    
+    text-align: center;
+    text-transform: uppercase;
+    color: #0f0d0e;
+  }
+  
+  .tag-link {
+    text-decoration: none;
+    color: #0f0d0e;
+  }
+  
+  .tag-link:hover {
+    color: #e058ff;
+  }
+  
+  .tag-link:focus {
+    color: #ff5a66;
+  }
+  /* Конец Блок с тегами -----------------------------------+ */
+  
+  /* Блок с категориями ------------------------------------+ */
+  .sidebar-categories {
+    box-sizing: border-box;
+    margin-top: 60px;
+  }
+  
+  .container-title-categories {
+    position: relative;
+  }
+  
+  .title-categories {
+    display: block;
+    
+    font-size: 14px;
+    font-weight: 700;
+    
+    text-align: center;
+    text-transform: uppercase;
+    color: #0f0d0e;
+    
+    box-sizing: border-box;
+    margin: 0;
+    
+    /* Зададим отступ псевдоэлементу с декорацией */
+    padding-bottom: 14px;
+  }
+  
+  .title-categories::after {
+    content: "";
+    
+    position: absolute;
+    display: block;
+    
+    width: 65px;
+    height: 3px;
+    
+    background-color: #e1d9bd;
+    
+    /* Зададим положение псевдоэлементу с декорацией */
+    bottom: 0;
+    left: 104px;
+  }
+  
+  .container-category-name {
+    box-sizing: border-box;
+    margin-top: 26px;
+    padding-left: 2px;  
+  }
+  
+  .category {
+    box-sizing: border-box;
+    margin: 0;
+    padding-bottom: 16px;
+  
+    font-size: 14px;
+    color: #000000;
+    font-weight: 700;
+    
+    list-style: none;
+    text-transform: capitalize;
+    
+    border-bottom: 1px solid #eeeeee;
+  }
+  
+  .category:nth-child(n+2) {
+    padding-top: 16px;
+  }
+  
+  .category-link {
+    text-decoration: none;
+    color: #000000;
+  }
+  
+  .category-link:hover {
+    color: #56cc83;
+  }
+  
+  .category-link:focus {
+    color: #8390f4;
+  }
+  
+  .category-quantity {
+    box-sizing: border-box;
+    margin: 0 0 0 2px;
+   
+    font-size: 12px;
+    color: #b59f5b;
+    font-weight: 700;
+  }
+  /* Конец Блок с категориями ------------------------------+ */
+  /* Конец Боковой раздел ----------------------------------+ */
+  /* Конец Основной контент страницы -----------------------+ */
+  
+  /* Подвал ------------------------------------------------+ */
+  .footer { 
+    box-sizing: border-box;
+    width: 1200px;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  /* Блок с соцсетями --------------------------------------+ */
+  .articles-socials {
+    background-color: #f4f7f6;
+  }
+  
+  .socials {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    
+    box-sizing: border-box;
+    margin: 0;
+    padding-left: 0;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    
+    list-style: none;
+  }
+  
+  .socials-item {
+    margin-right: 25px;
+  }
+  
+  .socials-item:last-child {
+    margin-right: 0;
+  }
+  
+  .socials-link {
+    display: block;
+    
+    width: 27px;
+    height: 27px;
+    
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  .socials-link-twitter {
+    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/004-twitter.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  
+  .socials-link-pinterest {
+    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/001-pinterest.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  
+  .socials-link-facebook {
+    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/002-facebook-logo.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  
+  .socials-link-instagram {
+    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/005-instagram.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  
+  .socials-link-tumblr {
+    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/003-tumblr.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  
+  .socials-link-text {
+    font-size: 13px;
+    font-weight: 400;
+  }
+  
+  .visually-hidden {
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute;
+  }
+  /* Конец Блок с соцсетями --------------------------------+ */
+  
+  /* Блок с Copyright --------------------------------------+ */
+  .copyright { 
+    box-sizing: border-box;
+    margin-top: 71px;
+    margin-bottom: 33px;
+  }
+  
+  .copyright-text {
+    box-sizing: border-box;
+    margin: 0;
+    
+    font-size: 12px;
+    font-weight: 700;
+    color: #999999;
+    
+    text-align: center;
+  }
+  
+  .copyright-link {
+    color: #999999;
+    text-decoration: none;
+  }
+  /* Конец Блок с Copyright --------------------------------+ */
+  /* Конец Подвал ------------------------------------------+ */
+  /* Конец Корневой элемент страницы -----------------------+ */
